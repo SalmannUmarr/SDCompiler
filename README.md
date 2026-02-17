@@ -1,4 +1,4 @@
-SALTIF Compiler - Lexical Analyzer
+**SALTIF Compiler - Lexical Analyzer**
 
 Course: Theory of Automata / Compiler Construction
 
