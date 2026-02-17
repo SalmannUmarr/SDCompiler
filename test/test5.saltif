@@ -1,0 +1,16 @@
+## Comments
+
+void CommentTest() {
+int X = 10; ## Inline comment
+
+#* This is a multi-line comment
+   It should be completely ignored
+   by the scanner logic.
+*#
+
+string Status = "Running";
+#* Nested-style #* Comments *# are usually flat *#
+return X;
+
+
+}

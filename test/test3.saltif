@@ -1,0 +1,17 @@
+## String Char With Escape Sequences
+
+void TextProcessing() {
+string WinPath = "C:\Program Files\Gemini";
+string UnixPath = "/home/user/docs";
+string Quote = "He said, \"This is a test.\"";
+
+char Tab = '\t';
+char NewLine = '\n';
+char Backslash = '\\';
+char SingleQuote = '\'';
+
+Print(Quote);
+
+
+}
+

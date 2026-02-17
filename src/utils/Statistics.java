@@ -1,52 +1,44 @@
 package utils;
 
-/**
- * Tracks token counts and comments removed during lexical analysis.
- * Contains counters for all 11 token categories.
- */
+import scanner.Token;
+import java.util.*;
+
+
+ /* Tracks token counts per type, total tokens, and comments removed. */
+
 public class Statistics {
-    private int keywordCount;
-    private int identifierCount;
-    private int integerLiteralCount;
-    private int floatLiteralCount;
-    private int stringLiteralCount;
-    private int operatorCount;
-    private int delimiterCount;
-    private int commentCount;
-    private int category9Count;
-    private int category10Count;
-    private int category11Count;
+    private final Map<Token.Type, Integer> counts = new EnumMap<>(Token.Type.class);
+    private int commentsRemoved = 0;
 
-    public int getKeywordCount() { return keywordCount; }
-    public void incrementKeywordCount() { keywordCount++; }
+    public Statistics() {
+        for (Token.Type type : Token.Type.values()) {
+            counts.put(type, 0);
+        }
+    }
 
-    public int getIdentifierCount() { return identifierCount; }
-    public void incrementIdentifierCount() { identifierCount++; }
+    public void count(Token.Type type) {
+        counts.put(type, counts.get(type) + 1);
+    }
 
-    public int getIntegerLiteralCount() { return integerLiteralCount; }
-    public void incrementIntegerLiteralCount() { integerLiteralCount++; }
+    public void addComment() {
+        commentsRemoved++;
+    }
 
-    public int getFloatLiteralCount() { return floatLiteralCount; }
-    public void incrementFloatLiteralCount() { floatLiteralCount++; }
+    public int getCount(Token.Type type) {
+        return counts.getOrDefault(type, 0);
+    }
 
-    public int getStringLiteralCount() { return stringLiteralCount; }
-    public void incrementStringLiteralCount() { stringLiteralCount++; }
+    public int getCommentCount() {
+        return commentsRemoved;
+    }
 
-    public int getOperatorCount() { return operatorCount; }
-    public void incrementOperatorCount() { operatorCount++; }
-
-    public int getDelimiterCount() { return delimiterCount; }
-    public void incrementDelimiterCount() { delimiterCount++; }
-
-    public int getCommentCount() { return commentCount; }
-    public void incrementCommentCount() { commentCount++; }
-
-    public int getCategory9Count() { return category9Count; }
-    public void incrementCategory9Count() { category9Count++; }
-
-    public int getCategory10Count() { return category10Count; }
-    public void incrementCategory10Count() { category10Count++; }
-
-    public int getCategory11Count() { return category11Count; }
-    public void incrementCategory11Count() { category11Count++; }
+    public void display() {
+        System.out.println("\n--- SCANNER STATISTICS ---");
+        for (Map.Entry<Token.Type, Integer> entry : counts.entrySet()) {
+            if (entry.getKey() != Token.Type.ERROR) {
+                System.out.printf("%-18s: %d\n", entry.getKey(), entry.getValue());
+            }
+        }
+        System.out.println("Comments Removed  : " + commentsRemoved);
+    }
 }

@@ -1,0 +1,17 @@
+## Lexical Errors
+
+void ErrorTest() {
+## 1. Decimal Digit Limit (7+ digits)
+float BadFloat = 0.1234567;
+
+## 2. Identifier Length (31+ chars)
+int ThisIdentifierIsWayTooLongToBeValidInThisLanguage = 500;
+
+## 3. Unterminated String
+string Broken = "This string never ends;
+
+## 4. Invalid Char
+char Bad = 'LongChar';
+
+
+}

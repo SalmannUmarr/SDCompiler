@@ -1,0 +1,20 @@
+## All Valid Tokens
+
+#* Basic Program Structure
+Tests all primary token categories
+*#
+
+void Main() {
+int Counter = +100;
+float Grade = 95.5;
+string Message = "Hello World";
+char GradeLetter = 'A';
+boolean IsActive = true;
+
+if (Counter > 0) {
+    Counter = Counter - 1;
+    return false;
+}
+
+
+}

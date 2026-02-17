@@ -1,0 +1,14 @@
+## Complex Expressions
+
+void Calculate() {
+Result = (Alpha + Beta) * (Gamma / 2) % 10;
+
+if (Val1 >= Val2 && Val1 != 0 || !IsLocked) {
+    Val1 += (Offset * -5);
+    IsLocked = true;
+} else {
+    Val1 = 0;
+}
+
+
+}

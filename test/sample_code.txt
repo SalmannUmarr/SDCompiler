@@ -1,2 +1,0 @@
-// Sample code for SDCompiler lexical analysis
-// Replace with your language constructs for testing

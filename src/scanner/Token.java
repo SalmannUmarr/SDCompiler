@@ -1,56 +1,27 @@
 package scanner;
 
-/**
- * Data class representing a token produced by the lexical analyzer.
- * Holds the token type, lexeme, and source location (line and column).
- */
 public class Token {
-    private String tokenType;
-    private String lexeme;
-    private int line;
-    private int column;
+    public enum Type {
+        KEYWORD, IDENTIFIER, INTEGER_LITERAL, FLOAT_LITERAL,
+        STRING_LITERAL, CHAR_LITERAL, BOOLEAN_LITERAL,
+        ARITHMETIC_OP, RELATIONAL_OP, LOGICAL_OP, ASSIGNMENT_OP,
+        PUNCTUATOR, COMMENT, ERROR
+    }
 
-    public Token(String tokenType, String lexeme, int line, int column) {
-        this.tokenType = tokenType;
+    public Type type;
+    public String lexeme;
+    public int line;
+    public int col;
+
+    public Token(Type type, String lexeme, int line, int col) {
+        this.type = type;
         this.lexeme = lexeme;
         this.line = line;
-        this.column = column;
-    }
-
-    public String getTokenType() {
-        return tokenType;
-    }
-
-    public void setTokenType(String tokenType) {
-        this.tokenType = tokenType;
-    }
-
-    public String getLexeme() {
-        return lexeme;
-    }
-
-    public void setLexeme(String lexeme) {
-        this.lexeme = lexeme;
-    }
-
-    public int getLine() {
-        return line;
-    }
-
-    public void setLine(int line) {
-        this.line = line;
-    }
-
-    public int getColumn() {
-        return column;
-    }
-
-    public void setColumn(int column) {
-        this.column = column;
+        this.col = col;
     }
 
     @Override
     public String toString() {
-        return String.format("Token{type=%s, lexeme='%s', line=%d, column=%d}", tokenType, lexeme, line, column);
+        return String.format("Line %-3d | Col %-3d | %-18s | %s", line, col, type, lexeme);
     }
 }

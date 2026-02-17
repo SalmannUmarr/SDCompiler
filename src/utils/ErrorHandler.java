@@ -1,11 +1,10 @@
 package utils;
 
-/**
- * Manages lexical errors encountered during scanning.
- */
 public class ErrorHandler {
-
-    public void reportError(int line, int column, String message) {
-        // TODO: Log or collect lexical errors
+    private int errors = 0;
+    public void report(int line, int col, String message) {
+        errors++;
+        System.err.printf("[ERROR] Line %d, Col %d: %s\n", line, col, message);
     }
+    public int getCount() { return errors; }
 }
