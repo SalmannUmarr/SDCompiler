@@ -1,226 +1,183 @@
 **SALTIF Compiler - Lexical Analyzer**
 
-Course: Theory of Automata / Compiler Construction
+Compiler Construction
 
-Team Members: * Salman Umar (I22-0908)
+Salman Umar (I22-0908)
 
 Danish Atif (I22-1095)
 
-1. Language Overview
+   📑 Table of Contents
 
-Language Name: SALTIF
+      Language Overview
 
-File Extension: .saltif
+      Keyword List
+
+      Identifier Rules
+
+      Literal Formats
+
+      Operators & Precedence
+
+      Comment Syntax
+
+      Sample Programs
+
+      Compilation & Execution
+
+      Error Handling
+
+**1. Language Overview**
+
+            Language Name: SALTIF
+
+            File Extension: .saltif
 
 SALTIF is a custom-designed, statically typed language developed for academic exploration into lexical analysis and compiler design.
 
-2. Keyword List & Meanings
+**2. Keyword List & Meanings**
 
 The scanner recognizes the following reserved keywords. These cannot be used as identifiers.
 
-Keyword
+      void Specifies that a function does not return a value.
 
-Meaning
+      int Declares a 32-bit integer variable.
 
-void
+      float Declares a floating-point variable (max 6 decimal precision).
+      
+      string Declares a sequence of characters enclosed in double quotes.
 
-Specifies that a function does not return a value.
+      char Declares a single character enclosed in single quotes.
 
-int
+      boolean Declares a logical variable (true or false).
+      
+      if Conditional branch execution.
+      
+      else Alternative branch for if conditions.
+      
+      while Loop structure that repeats while a condition is true.
 
-Declares a 32-bit integer variable.
+      return Exits a function and optionally returns a value.
 
-float
-
-Declares a floating-point variable (max 6 decimal precision).
-
-string
-
-Declares a sequence of characters enclosed in double quotes.
-
-char
-
-Declares a single character enclosed in single quotes.
-
-boolean
-
-Declares a logical variable (true or false).
-
-if
-
-Conditional branch execution.
-
-else
-
-Alternative branch for if conditions.
-
-while
-
-Loop structure that repeats while a condition is true.
-
-return
-
-Exits a function and optionally returns a value.
-
-3. Identifier Rules
+**3. Identifier Rules**
 
 Identifiers are used for naming variables and functions.
 
-Rules:
+      [!IMPORTANT]
+      Strict Rules:
 
-Must start with an alphabetic letter (A-Z, a-z).
+      Must start with an alphabetic letter (A-Z, a-z).
 
-Can contain letters and digits.
+      Can contain letters and digits.
 
-Case-sensitive (MyVar is different from myvar).
+      Case-sensitive (MyVar is different from myvar).
 
-Maximum Length: 31 characters (Lexical error triggered if exceeded).
+      Maximum Length: 31 characters.
 
-Examples:
+            Examples:
 
-✅ ValidVar, counter123, Main
+            ✅ ValidVar, counter123, Main
 
-❌ 123Invalid (starts with digit), too_long_identifier_exceeding_limit (exceeds 31 chars)
+            ❌ 123Invalid (starts with digit)
 
-4. Literal Formats
+            ❌ too_long_identifier_exceeding_limit (exceeds 31 chars)
 
-Type
+** 4. Literal Formats**
 
-Format / Rule
+         Integer       Sequence of digits, optional + or - prefix.      42, -10, +500
 
-Example
+         Float         Digits with a decimal point. Max 6 decimal places.      3.14, 0.0005
 
-Integer
+         String        Characters in double quotes. Supports escapes.      "Hello World", "C:\\Path"
 
-Sequence of digits, optional + or - prefix.
+         Char          Single character or escape in single quotes.      'A', '\n', '\t'
+         
+         Boolean       Logical constants.     true, false
 
-42, -10, +500
+**5. Operators & Precedence**
 
-Float
+Operators are grouped by type (ordered from highest to lowest precedence):
 
-Digits with a decimal point. Max 6 decimal places.
+      Logical NOT: !
 
-3.14, 0.0005, -19.95
+      Arithmetic (Multiplicative): *, /, %
 
-String
+      Arithmetic (Additive): +, -
 
-Characters enclosed in double quotes. Supports escapes.
+      Relational: <, >, <=, >=
 
-"Hello World", "C:\\Path"
+      Equality: ==, !=
 
-Char
+      Logical AND/OR: &&, ||
 
-A single character or escape sequence in single quotes.
+      Assignment: =, +=, -=
 
-'A', '\n', '\t'
+**6. Comment Syntax**
 
-Boolean
+   SALTIF supports two types of comments:
 
-Logical constants.
+   Single-line: Uses ##
 
-true, false
-
-5. Operators & Precedence
-
-Operators are grouped by type. The scanner identifies the following (ordered by general precedence):
-
-Logical NOT: !
-
-Arithmetic (Multiplicative): *, /, %
-
-Arithmetic (Additive): +, -
-
-Relational: <, >, <=, >=
-
-Equality: ==, !=
-
-Logical AND/OR: &&, ||
-
-Assignment: =, +=, -=
-
-6. Comment Syntax
-
-SALTIF supports two types of comments which are stripped by the scanner:
-
-Single-line: Uses ## to comment out the rest of the line.
-
-int x = 10; ## This is a single line comment
+   int x = 10; ## This is a single line comment
 
 
-Multi-line: Uses #* to start and *# to end.
+   Multi-line: Uses #* and *#
 
-#* This is a 
-   multi-line comment *#
-
-
-7. Sample Programs
-
-Sample 1: Basic Declarations (test1.saltif)
-
-void Main() {
-    int Counter = +100;
-    float Grade = 95.5;
-    string Message = "Passed";
-    char Letter = 'A';
-    boolean IsActive = true;
-}
+   #* This is a 
+      multi-line comment *#
 
 
-Sample 2: Logic and Loops (test2.saltif)
+**7. Sample Programs**
 
-void CheckValue() {
+   Basic Declarations (test1.saltif)
+
+   void Main() {
+       int Counter = +100;
+       float Grade = 95.5;
+       string Message = "Passed";
+       char Letter = 'A';
+       boolean IsActive = true;
+   }
+
+
+   Logic and Loops (test2.saltif)
+
+   void CheckValue() {
     if (Counter > 0 && !IsLocked) {
-        Counter -= 1;
-    } else {
-        return false;
-    }
-}
+           Counter -= 1;
+       } else {
+           return false;
+       }
+   }
 
 
-Sample 3: String Escaping (test3.saltif)
+**8. Compilation & Execution**
 
-void Paths() {
-    string Win = "C:\\Program Files\\";
-    char Tab = '\t';
-    char NewLine = '\n';
-}
+**Prerequisites**
 
+   JDK 11+ installed.
 
-8. Compilation & Execution
+   Steps
 
-Prerequisites
+      Prepare Directory: Ensure source is in src/ and test files are in test/.
 
-Java Development Kit (JDK) 11 or higher installed.
+      Compile:
 
-Steps
-
-Prepare Directory:
-Ensure your source code is in src/ and test files are in test/.
-
-Compile:
-
-javac -d bin src/**/*.java
+      javac -d bin src/**/*.java
 
 
-Run:
+      Run:
 
-java -cp bin Main
+      java -cp bin Main
 
 
-Outputs:
+**9. Error Handling**
 
-Console: Displays real-time token scanning, statistics, and the Symbol Table.
+   The scanner detects and reports the following lexical errors:
 
-TestResults.txt: A permanent log of the entire execution for all test files.
+      Float Precision: Reports if a float exceeds 6 decimal places.
 
-9. Error Handling
+      Identifier Length: Reports if a name exceeds 31 characters.
 
-The scanner provides descriptive error messages for:
+      Unterminated Literals: Detects unclosed strings or comments.
 
-Float Precision: Reports if a float exceeds 6 decimal places.
-
-Identifier Length: Reports if a name exceeds 31 characters.
-
-Unterminated Literals: Detects strings or multi-line comments that do not close.
-
-Invalid Characters: Reports symbols not recognized by the SALTIF alphabet.
+      Invalid Characters: Reports symbols not in the SALTIF alphabet.
