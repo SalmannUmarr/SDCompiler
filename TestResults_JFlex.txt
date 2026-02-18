@@ -1,0 +1,416 @@
+JFlex SCANNER TEST RESULTS
+==============================
+
+=============== PROCESSING: test1.saltif===============
+-------------------------------------------------------
+TOKEN OUTPUT:
+<KEYWORD, "void", Line: 7, Col: 1>
+<IDENTIFIER, "Main", Line: 7, Col: 6>
+<PUNCTUATOR, "(", Line: 7, Col: 10>
+<PUNCTUATOR, ")", Line: 7, Col: 11>
+<PUNCTUATOR, "{", Line: 7, Col: 13>
+<KEYWORD, "int", Line: 8, Col: 1>
+<IDENTIFIER, "Counter", Line: 8, Col: 5>
+<ASSIGNMENT_OP, "=", Line: 8, Col: 13>
+<INTEGER_LITERAL, "+100", Line: 8, Col: 15>
+<PUNCTUATOR, ";", Line: 8, Col: 19>
+<KEYWORD, "float", Line: 9, Col: 1>
+<IDENTIFIER, "Grade", Line: 9, Col: 7>
+<ASSIGNMENT_OP, "=", Line: 9, Col: 13>
+<FLOAT_LITERAL, "95.5", Line: 9, Col: 15>
+<PUNCTUATOR, ";", Line: 9, Col: 19>
+<KEYWORD, "string", Line: 10, Col: 1>
+<IDENTIFIER, "Message", Line: 10, Col: 8>
+<ASSIGNMENT_OP, "=", Line: 10, Col: 16>
+<STRING_LITERAL, ""Hello World"", Line: 10, Col: 18>
+<PUNCTUATOR, ";", Line: 10, Col: 31>
+<KEYWORD, "char", Line: 11, Col: 1>
+<IDENTIFIER, "GradeLetter", Line: 11, Col: 6>
+<ASSIGNMENT_OP, "=", Line: 11, Col: 18>
+<CHAR_LITERAL, "'A'", Line: 11, Col: 20>
+<PUNCTUATOR, ";", Line: 11, Col: 23>
+<KEYWORD, "boolean", Line: 12, Col: 1>
+<IDENTIFIER, "IsActive", Line: 12, Col: 9>
+<ASSIGNMENT_OP, "=", Line: 12, Col: 18>
+<BOOLEAN_LITERAL, "true", Line: 12, Col: 20>
+<PUNCTUATOR, ";", Line: 12, Col: 24>
+<KEYWORD, "if", Line: 14, Col: 1>
+<PUNCTUATOR, "(", Line: 14, Col: 4>
+<IDENTIFIER, "Counter", Line: 14, Col: 5>
+<RELATIONAL_OP, ">", Line: 14, Col: 13>
+<INTEGER_LITERAL, "0", Line: 14, Col: 15>
+<PUNCTUATOR, ")", Line: 14, Col: 16>
+<PUNCTUATOR, "{", Line: 14, Col: 18>
+<IDENTIFIER, "Counter", Line: 15, Col: 5>
+<ASSIGNMENT_OP, "=", Line: 15, Col: 13>
+<IDENTIFIER, "Counter", Line: 15, Col: 15>
+<ARITHMETIC_OP, "-", Line: 15, Col: 23>
+<INTEGER_LITERAL, "1", Line: 15, Col: 25>
+<PUNCTUATOR, ";", Line: 15, Col: 26>
+<KEYWORD, "return", Line: 16, Col: 5>
+<BOOLEAN_LITERAL, "false", Line: 16, Col: 12>
+<PUNCTUATOR, ";", Line: 16, Col: 17>
+<PUNCTUATOR, "}", Line: 17, Col: 1>
+<PUNCTUATOR, "}", Line: 20, Col: 1>
+
+STATISTICS:
+Lines Processed: 20
+Total Tokens: 48
+
+--- SCANNER STATISTICS ---
+KEYWORD           : 8
+IDENTIFIER        : 9
+INTEGER_LITERAL   : 3
+FLOAT_LITERAL     : 1
+STRING_LITERAL    : 1
+CHAR_LITERAL      : 1
+BOOLEAN_LITERAL   : 2
+ARITHMETIC_OP     : 1
+RELATIONAL_OP     : 1
+LOGICAL_OP        : 0
+ASSIGNMENT_OP     : 6
+PUNCTUATOR        : 15
+COMMENT           : 0
+Comments Removed  : 2
+
+SYMBOL TABLE
+----------------------------------------------------------------------
+Lexeme/Name               | Type               | Line 1st | Freq      
+----------------------------------------------------------------------
+Main                      | IDENTIFIER         | 7        | 1         
+Counter                   | IDENTIFIER         | 8        | 4         
++100                      | INTEGER_LITERAL    | 8        | 1         
+Grade                     | IDENTIFIER         | 9        | 1         
+95.5                      | FLOAT_LITERAL      | 9        | 1         
+Message                   | IDENTIFIER         | 10       | 1         
+"Hello World"             | STRING_LITERAL     | 10       | 1         
+GradeLetter               | IDENTIFIER         | 11       | 1         
+'A'                       | CHAR_LITERAL       | 11       | 1         
+IsActive                  | IDENTIFIER         | 12       | 1         
+true                      | BOOLEAN_LITERAL    | 12       | 1         
+0                         | INTEGER_LITERAL    | 14       | 1         
+1                         | INTEGER_LITERAL    | 15       | 1         
+false                     | BOOLEAN_LITERAL    | 16       | 1         
+----------------------------------------------------------------------
+
+[Errors Found: 0]
+
+
+=============== PROCESSING: test2.saltif===============
+-------------------------------------------------------
+TOKEN OUTPUT:
+<KEYWORD, "void", Line: 3, Col: 1>
+<IDENTIFIER, "Calculate", Line: 3, Col: 6>
+<PUNCTUATOR, "(", Line: 3, Col: 15>
+<PUNCTUATOR, ")", Line: 3, Col: 16>
+<PUNCTUATOR, "{", Line: 3, Col: 18>
+<IDENTIFIER, "Result", Line: 4, Col: 1>
+<ASSIGNMENT_OP, "=", Line: 4, Col: 8>
+<PUNCTUATOR, "(", Line: 4, Col: 10>
+<IDENTIFIER, "Alpha", Line: 4, Col: 11>
+<ARITHMETIC_OP, "+", Line: 4, Col: 17>
+<IDENTIFIER, "Beta", Line: 4, Col: 19>
+<PUNCTUATOR, ")", Line: 4, Col: 23>
+<ARITHMETIC_OP, "*", Line: 4, Col: 25>
+<PUNCTUATOR, "(", Line: 4, Col: 27>
+<IDENTIFIER, "Gamma", Line: 4, Col: 28>
+<ARITHMETIC_OP, "/", Line: 4, Col: 34>
+<INTEGER_LITERAL, "2", Line: 4, Col: 36>
+<PUNCTUATOR, ")", Line: 4, Col: 37>
+<ARITHMETIC_OP, "%", Line: 4, Col: 39>
+<INTEGER_LITERAL, "10", Line: 4, Col: 41>
+<PUNCTUATOR, ";", Line: 4, Col: 43>
+<KEYWORD, "if", Line: 6, Col: 1>
+<PUNCTUATOR, "(", Line: 6, Col: 4>
+<IDENTIFIER, "Val1", Line: 6, Col: 5>
+<ASSIGNMENT_OP, ">=", Line: 6, Col: 10>
+<IDENTIFIER, "Val2", Line: 6, Col: 13>
+<LOGICAL_OP, "&&", Line: 6, Col: 18>
+<IDENTIFIER, "Val1", Line: 6, Col: 21>
+<ASSIGNMENT_OP, "!=", Line: 6, Col: 26>
+<INTEGER_LITERAL, "0", Line: 6, Col: 29>
+<LOGICAL_OP, "||", Line: 6, Col: 31>
+<RELATIONAL_OP, "!", Line: 6, Col: 34>
+<IDENTIFIER, "IsLocked", Line: 6, Col: 35>
+<PUNCTUATOR, ")", Line: 6, Col: 43>
+<PUNCTUATOR, "{", Line: 6, Col: 45>
+<IDENTIFIER, "Val1", Line: 7, Col: 5>
+<ASSIGNMENT_OP, "+=", Line: 7, Col: 10>
+<PUNCTUATOR, "(", Line: 7, Col: 13>
+<IDENTIFIER, "Offset", Line: 7, Col: 14>
+<ARITHMETIC_OP, "*", Line: 7, Col: 21>
+<INTEGER_LITERAL, "-5", Line: 7, Col: 23>
+<PUNCTUATOR, ")", Line: 7, Col: 25>
+<PUNCTUATOR, ";", Line: 7, Col: 26>
+<IDENTIFIER, "IsLocked", Line: 8, Col: 5>
+<ASSIGNMENT_OP, "=", Line: 8, Col: 14>
+<BOOLEAN_LITERAL, "true", Line: 8, Col: 16>
+<PUNCTUATOR, ";", Line: 8, Col: 20>
+<PUNCTUATOR, "}", Line: 9, Col: 1>
+<KEYWORD, "else", Line: 9, Col: 3>
+<PUNCTUATOR, "{", Line: 9, Col: 8>
+<IDENTIFIER, "Val1", Line: 10, Col: 5>
+<ASSIGNMENT_OP, "=", Line: 10, Col: 10>
+<INTEGER_LITERAL, "0", Line: 10, Col: 12>
+<PUNCTUATOR, ";", Line: 10, Col: 13>
+<PUNCTUATOR, "}", Line: 11, Col: 1>
+<PUNCTUATOR, "}", Line: 14, Col: 1>
+
+STATISTICS:
+Lines Processed: 14
+Total Tokens: 56
+
+--- SCANNER STATISTICS ---
+KEYWORD           : 3
+IDENTIFIER        : 13
+INTEGER_LITERAL   : 5
+FLOAT_LITERAL     : 0
+STRING_LITERAL    : 0
+CHAR_LITERAL      : 0
+BOOLEAN_LITERAL   : 1
+ARITHMETIC_OP     : 5
+RELATIONAL_OP     : 1
+LOGICAL_OP        : 2
+ASSIGNMENT_OP     : 6
+PUNCTUATOR        : 20
+COMMENT           : 0
+Comments Removed  : 1
+
+SYMBOL TABLE
+----------------------------------------------------------------------
+Lexeme/Name               | Type               | Line 1st | Freq      
+----------------------------------------------------------------------
+Calculate                 | IDENTIFIER         | 3        | 1         
+Result                    | IDENTIFIER         | 4        | 1         
+Alpha                     | IDENTIFIER         | 4        | 1         
+Beta                      | IDENTIFIER         | 4        | 1         
+Gamma                     | IDENTIFIER         | 4        | 1         
+2                         | INTEGER_LITERAL    | 4        | 1         
+10                        | INTEGER_LITERAL    | 4        | 1         
+Val1                      | IDENTIFIER         | 6        | 4         
+Val2                      | IDENTIFIER         | 6        | 1         
+0                         | INTEGER_LITERAL    | 6        | 2         
+IsLocked                  | IDENTIFIER         | 6        | 2         
+Offset                    | IDENTIFIER         | 7        | 1         
+-5                        | INTEGER_LITERAL    | 7        | 1         
+true                      | BOOLEAN_LITERAL    | 8        | 1         
+----------------------------------------------------------------------
+
+[Errors Found: 0]
+
+
+=============== PROCESSING: test3.saltif===============
+-------------------------------------------------------
+TOKEN OUTPUT:
+<KEYWORD, "void", Line: 3, Col: 1>
+<IDENTIFIER, "TextProcessing", Line: 3, Col: 6>
+<PUNCTUATOR, "(", Line: 3, Col: 20>
+<PUNCTUATOR, ")", Line: 3, Col: 21>
+<PUNCTUATOR, "{", Line: 3, Col: 23>
+<KEYWORD, "string", Line: 4, Col: 1>
+<IDENTIFIER, "WinPath", Line: 4, Col: 8>
+<ASSIGNMENT_OP, "=", Line: 4, Col: 16>
+<STRING_LITERAL, ""C:\Program Files\Gemini"", Line: 4, Col: 18>
+<PUNCTUATOR, ";", Line: 4, Col: 43>
+<KEYWORD, "string", Line: 5, Col: 1>
+<IDENTIFIER, "UnixPath", Line: 5, Col: 8>
+<ASSIGNMENT_OP, "=", Line: 5, Col: 17>
+<STRING_LITERAL, ""/home/user/docs"", Line: 5, Col: 19>
+<PUNCTUATOR, ";", Line: 5, Col: 36>
+<KEYWORD, "string", Line: 6, Col: 1>
+<IDENTIFIER, "Quote", Line: 6, Col: 8>
+<ASSIGNMENT_OP, "=", Line: 6, Col: 14>
+<STRING_LITERAL, ""He said, \"This is a test.\""", Line: 6, Col: 16>
+<PUNCTUATOR, ";", Line: 6, Col: 46>
+<KEYWORD, "char", Line: 8, Col: 1>
+<IDENTIFIER, "Tab", Line: 8, Col: 6>
+<ASSIGNMENT_OP, "=", Line: 8, Col: 10>
+<CHAR_LITERAL, "'\t'", Line: 8, Col: 12>
+<PUNCTUATOR, ";", Line: 8, Col: 16>
+<KEYWORD, "char", Line: 9, Col: 1>
+<IDENTIFIER, "NewLine", Line: 9, Col: 6>
+<ASSIGNMENT_OP, "=", Line: 9, Col: 14>
+<CHAR_LITERAL, "'\n'", Line: 9, Col: 16>
+<PUNCTUATOR, ";", Line: 9, Col: 20>
+<KEYWORD, "char", Line: 10, Col: 1>
+<IDENTIFIER, "Backslash", Line: 10, Col: 6>
+<ASSIGNMENT_OP, "=", Line: 10, Col: 16>
+<CHAR_LITERAL, "'\\'", Line: 10, Col: 18>
+<PUNCTUATOR, ";", Line: 10, Col: 22>
+<KEYWORD, "char", Line: 11, Col: 1>
+<IDENTIFIER, "SingleQuote", Line: 11, Col: 6>
+<ASSIGNMENT_OP, "=", Line: 11, Col: 18>
+<CHAR_LITERAL, "'\''", Line: 11, Col: 20>
+<PUNCTUATOR, ";", Line: 11, Col: 24>
+<IDENTIFIER, "Print", Line: 13, Col: 1>
+<PUNCTUATOR, "(", Line: 13, Col: 6>
+<IDENTIFIER, "Quote", Line: 13, Col: 7>
+<PUNCTUATOR, ")", Line: 13, Col: 12>
+<PUNCTUATOR, ";", Line: 13, Col: 13>
+<PUNCTUATOR, "}", Line: 16, Col: 1>
+
+STATISTICS:
+Lines Processed: 18
+Total Tokens: 46
+
+--- SCANNER STATISTICS ---
+KEYWORD           : 8
+IDENTIFIER        : 10
+INTEGER_LITERAL   : 0
+FLOAT_LITERAL     : 0
+STRING_LITERAL    : 3
+CHAR_LITERAL      : 4
+BOOLEAN_LITERAL   : 0
+ARITHMETIC_OP     : 0
+RELATIONAL_OP     : 0
+LOGICAL_OP        : 0
+ASSIGNMENT_OP     : 7
+PUNCTUATOR        : 14
+COMMENT           : 0
+Comments Removed  : 1
+
+SYMBOL TABLE
+----------------------------------------------------------------------
+Lexeme/Name               | Type               | Line 1st | Freq      
+----------------------------------------------------------------------
+TextProcessing            | IDENTIFIER         | 3        | 1         
+WinPath                   | IDENTIFIER         | 4        | 1         
+"C:\Program Files\Gemini" | STRING_LITERAL     | 4        | 1         
+UnixPath                  | IDENTIFIER         | 5        | 1         
+"/home/user/docs"         | STRING_LITERAL     | 5        | 1         
+Quote                     | IDENTIFIER         | 6        | 2         
+"He said, \"This is a test.\"" | STRING_LITERAL     | 6        | 1         
+Tab                       | IDENTIFIER         | 8        | 1         
+'\t'                      | CHAR_LITERAL       | 8        | 1         
+NewLine                   | IDENTIFIER         | 9        | 1         
+'\n'                      | CHAR_LITERAL       | 9        | 1         
+Backslash                 | IDENTIFIER         | 10       | 1         
+'\\'                      | CHAR_LITERAL       | 10       | 1         
+SingleQuote               | IDENTIFIER         | 11       | 1         
+'\''                      | CHAR_LITERAL       | 11       | 1         
+Print                     | IDENTIFIER         | 13       | 1         
+----------------------------------------------------------------------
+
+[Errors Found: 0]
+
+
+=============== PROCESSING: test4.saltif===============
+-------------------------------------------------------
+TOKEN OUTPUT:
+<KEYWORD, "void", Line: 3, Col: 1>
+<IDENTIFIER, "ErrorTest", Line: 3, Col: 6>
+<PUNCTUATOR, "(", Line: 3, Col: 15>
+<PUNCTUATOR, ")", Line: 3, Col: 16>
+<PUNCTUATOR, "{", Line: 3, Col: 18>
+<KEYWORD, "float", Line: 5, Col: 1>
+<IDENTIFIER, "BadFloat", Line: 5, Col: 7>
+<ASSIGNMENT_OP, "=", Line: 5, Col: 16>
+<FLOAT_LITERAL, "0.123456", Line: 5, Col: 18>
+<PUNCTUATOR, ";", Line: 5, Col: 27>
+<KEYWORD, "int", Line: 8, Col: 1>
+<ERROR, "ThisIdentifierIsWayTooLongToBeValidInThisLanguage", Line: 8, Col: 5>
+<ASSIGNMENT_OP, "=", Line: 8, Col: 55>
+<INTEGER_LITERAL, "500", Line: 8, Col: 57>
+<PUNCTUATOR, ";", Line: 8, Col: 60>
+<KEYWORD, "string", Line: 11, Col: 1>
+<IDENTIFIER, "Broken", Line: 11, Col: 8>
+<ASSIGNMENT_OP, "=", Line: 11, Col: 15>
+<ERROR, ""This string never ends;", Line: 11, Col: 17>
+<KEYWORD, "char", Line: 14, Col: 1>
+<IDENTIFIER, "Bad", Line: 14, Col: 6>
+<ASSIGNMENT_OP, "=", Line: 14, Col: 10>
+<ERROR, "'LongChar'", Line: 14, Col: 12>
+<PUNCTUATOR, ";", Line: 14, Col: 22>
+<PUNCTUATOR, "}", Line: 17, Col: 1>
+
+STATISTICS:
+Lines Processed: 17
+Total Tokens: 25
+
+--- SCANNER STATISTICS ---
+KEYWORD           : 5
+IDENTIFIER        : 4
+INTEGER_LITERAL   : 1
+FLOAT_LITERAL     : 1
+STRING_LITERAL    : 0
+CHAR_LITERAL      : 0
+BOOLEAN_LITERAL   : 0
+ARITHMETIC_OP     : 0
+RELATIONAL_OP     : 0
+LOGICAL_OP        : 0
+ASSIGNMENT_OP     : 4
+PUNCTUATOR        : 7
+COMMENT           : 0
+Comments Removed  : 5
+
+SYMBOL TABLE
+----------------------------------------------------------------------
+Lexeme/Name               | Type               | Line 1st | Freq      
+----------------------------------------------------------------------
+ErrorTest                 | IDENTIFIER         | 3        | 1         
+BadFloat                  | IDENTIFIER         | 5        | 1         
+0.123456                  | FLOAT_LITERAL      | 5        | 1         
+500                       | INTEGER_LITERAL    | 8        | 1         
+Broken                    | IDENTIFIER         | 11       | 1         
+Bad                       | IDENTIFIER         | 14       | 1         
+----------------------------------------------------------------------
+
+[Errors Found: 4]
+
+
+=============== PROCESSING: test5.saltif===============
+-------------------------------------------------------
+TOKEN OUTPUT:
+<KEYWORD, "void", Line: 3, Col: 1>
+<IDENTIFIER, "CommentTest", Line: 3, Col: 6>
+<PUNCTUATOR, "(", Line: 3, Col: 17>
+<PUNCTUATOR, ")", Line: 3, Col: 18>
+<PUNCTUATOR, "{", Line: 3, Col: 20>
+<KEYWORD, "int", Line: 4, Col: 1>
+<IDENTIFIER, "X", Line: 4, Col: 5>
+<ASSIGNMENT_OP, "=", Line: 4, Col: 7>
+<INTEGER_LITERAL, "10", Line: 4, Col: 9>
+<PUNCTUATOR, ";", Line: 4, Col: 11>
+<KEYWORD, "string", Line: 11, Col: 1>
+<IDENTIFIER, "Status", Line: 11, Col: 8>
+<ASSIGNMENT_OP, "=", Line: 11, Col: 15>
+<STRING_LITERAL, ""Running"", Line: 11, Col: 17>
+<PUNCTUATOR, ";", Line: 11, Col: 26>
+<KEYWORD, "return", Line: 13, Col: 1>
+<IDENTIFIER, "X", Line: 13, Col: 8>
+<PUNCTUATOR, ";", Line: 13, Col: 9>
+<PUNCTUATOR, "}", Line: 16, Col: 1>
+
+STATISTICS:
+Lines Processed: 16
+Total Tokens: 19
+
+--- SCANNER STATISTICS ---
+KEYWORD           : 4
+IDENTIFIER        : 4
+INTEGER_LITERAL   : 1
+FLOAT_LITERAL     : 0
+STRING_LITERAL    : 1
+CHAR_LITERAL      : 0
+BOOLEAN_LITERAL   : 0
+ARITHMETIC_OP     : 0
+RELATIONAL_OP     : 0
+LOGICAL_OP        : 0
+ASSIGNMENT_OP     : 2
+PUNCTUATOR        : 7
+COMMENT           : 0
+Comments Removed  : 4
+
+SYMBOL TABLE
+----------------------------------------------------------------------
+Lexeme/Name               | Type               | Line 1st | Freq      
+----------------------------------------------------------------------
+CommentTest               | IDENTIFIER         | 3        | 1         
+X                         | IDENTIFIER         | 4        | 2         
+10                        | INTEGER_LITERAL    | 4        | 1         
+Status                    | IDENTIFIER         | 11       | 1         
+"Running"                 | STRING_LITERAL     | 11       | 1         
+----------------------------------------------------------------------
+
+[Errors Found: 0]
+

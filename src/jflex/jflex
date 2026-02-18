@@ -1,0 +1,2 @@
+#!/bin/bash
+java -cp "$(dirname "$0")/jflex.jar:$(dirname "$0")/java-cup-runtime.jar" jflex.Main "$@"
