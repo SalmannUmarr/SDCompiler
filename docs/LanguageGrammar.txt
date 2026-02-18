@@ -1,0 +1,112 @@
+SALTIF LANGUAGE SPECIFICATION
+
+Version: 1.0
+Authors: Salman Umar (I22-0908), Danish Atif (I22-1095)
+
+ALPHABET & CHARACTER SET
+
+Upper-case letters: A-Z
+
+Lower-case letters: a-z
+
+Digits: 0-9
+
+Special Characters: + - * / % = ! < > & | ( ) { } [ ] ; ' " . # \
+
+Whitespace: Space, Tab, Newline (\n), Carriage Return (\r)
+
+LEXICAL TOKENS
+
+A. KEYWORDS (Reserved)
+void, int, float, string, char, boolean, if, else, while, return, true, false
+
+B. IDENTIFIERS
+
+Regex: [a-zA-Z][a-zA-Z0-9]*
+
+Rule 1: Must start with a letter.
+
+Rule 2: Maximum length of 31 characters.
+
+Rule 3: Case-sensitive.
+
+C. LITERALS
+
+Integer: [+-]?[0-9]+
+
+Float:   [+-]?[0-9]*.[0-9]+ (Max 6 decimal places)
+
+String:  "[^"]*" (Supports escape sequences: ", \, \n, \t)
+
+Char:    '[^']' or '
+
+$$nt'\$$
+
+' (Single character or specific escape)
+
+Boolean: true | false
+
+D. OPERATORS
+
+Arithmetic: +, -, *, /, %
+
+Relational: <, >, <=, >=, ==, !=
+
+Logical:    &&, ||, !
+
+Assignment: =, +=, -=
+
+E. PUNCTUATORS
+( ) { } [ ] ; ,
+
+COMMENT SYNTAX
+
+Single-line: Starts with ## and ends at newline.
+
+Multi-line:  Starts with #* and ends with *# (non-nested).
+
+ESCAPE SEQUENCES
+
+The following sequences are recognized within String and Char literals:
+
+\n : Newline
+
+\t : Horizontal Tab
+
+\ : Backslash
+
+" : Double Quote (String only)
+
+' : Single Quote (Char only)
+
+OPERATOR PRECEDENCE (High to Low)
+
+! (Unary NOT)
+
+*, /, %
+
++, -
+
+<, >, <=, >=
+
+==, !=
+
+&&
+
+||
+
+=, +=, -=
+
+LEXICAL ERROR CONSTRAINTS
+
+ID_TOO_LONG: Identifier length > 31 characters.
+
+FLOAT_PRECISION: Float decimal part > 6 digits.
+
+UNTERMINATED_STRING: String missing closing double quote.
+
+UNTERMINATED_COMMENT: Multi-line comment missing *# closer.
+
+INVALID_CHAR: Character not belonging to the SALTIF alphabet.
+
+INVALID_CHAR_LITERAL: Char literal containing more than one character or invalid escape.
